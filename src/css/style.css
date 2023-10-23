@@ -1,5 +1,5 @@
 body {
-    /* max-width: 1440px; */
+    max-width: 1440px;
     background: var(--Violet);
     background-image: url('../images/bg-desktop.svg');
 
@@ -11,20 +11,29 @@ body {
     flex-direction: column;
 }
 
-.image-logo {
-    max-width: 180px;
-    margin: 30px 0 40px 60px;
+.cabecalho {
+    width: 180px;
+}
 
+.image-logo {
+    width: 100%;
+    padding: 20px 0 30px 50px;
+
+}
+
+.image {
+    width: 550px;
 }
 
 .section {
     display: flex;
     justify-content: center;
+    gap: 20px;
 
 }
 
 .section img {
-    width: 600px;
+    width: 100%;
     margin-right: 50px;
 }
 
@@ -39,7 +48,7 @@ body {
 .info .title {
     font-family: "poppins";
     font-weight: 600;
-    font-size: 30px;
+    font-size: min(30px, 6.5vw);
     color: #ffffff;
     padding-bottom: 40px;
 }
@@ -60,22 +69,31 @@ body {
     background-color: #ffffff;
     font-family: "poppins";
     color: var(--Violet);
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .btn:hover {
     color: #ffffff;
-    background-color: hotpink;
+    background-color: orchid;
+    box-shadow: 2px 2px 6px black;
 }
 
 .social {
     display: flex;
+    align-items: center;
     justify-content: end;
-    gap: 15px;
-    margin-right: 40px;
+    margin-right: 20px;
+}
+
+.social-itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .social i {
+    width: 100%;
     color: #fff;
     border-radius: 50%;
     border: 1px solid #fff;
@@ -94,16 +112,16 @@ body {
     body {
         display: flex;
         flex-direction: column;
-        margin-right: 0;
+        background-image: url("../images/bg-mobile.svg");
+        background-repeat: no-repeat;
     }
 
-
     .image-logo {
-        margin-right: 0;
+        width: 140px;
+        margin: -37px;
     }
 
     .section {
-
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -111,8 +129,44 @@ body {
     }
 
     .image {
-        width: 100%;
-        margin: 0px;
+        width: 85%;
+        margin: 50px 0 0 0;
     }
-} 
 
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px 0 0;
+    }
+
+    .info .sub-title {
+        font-size: 14px;
+        margin-top: -22px;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        width: 170px;
+        height: 30px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+
+    .social i {
+        font-size: 8px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0 0 10px;
+    }
+
+}
